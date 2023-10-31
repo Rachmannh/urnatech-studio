@@ -127,3 +127,268 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+body {
+  height: 3000px;
+}
+
+/* mulai Home bagian kanan*/
+/* .pembungkus {
+  height: 100vh;
+} */
+
+.pembungkus .back {
+  background: linear-gradient(
+    to top left,
+    rgba(186, 255, 41, 0.2) 30%,
+    rgba(186, 165, 212, 0.2) 60%
+  );
+  /* height: 100vh; */
+  position: relative;
+  padding-bottom: 76px;
+}
+
+header {
+  padding-top: 180px;
+}
+
+header .container {
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+header .container .col-7 {
+  position: relative;
+}
+
+header .container .col h1 {
+  font-family: "Spline Sans", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 97px;
+  margin-bottom: 41px;
+  position: absolute;
+  width: 582px;
+  height: 172px;
+  top: -16px;
+}
+
+.kotak {
+  margin-bottom: 41px;
+  width: 582px;
+  height: 172px;
+}
+
+.svg-kali {
+  position: absolute;
+  top: 27px;
+  left: -54px;
+}
+
+header .container .col h1 .inspire {
+  background: var(
+    --Linear-1,
+    linear-gradient(94deg, #40c9ff 0%, #e81cff 38.28%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.ins-div {
+  width: 300px;
+  height: 129px;
+  border-radius: 50%;
+  transform: rotate(-11deg);
+  border: 3px solid #fff;
+  padding: 5px;
+  position: relative;
+  left: -32px;
+  top: -36px;
+}
+
+header .container .col h1 .T-digi {
+  color: #e2f0e7;
+}
+
+header .container .col h1 .crea {
+  color: #baff29;
+}
+
+header .container .col .slogan {
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+  margin-bottom: 62px;
+}
+
+header .container .col .slogan p {
+  font-family: "Spline Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+header .container .col button {
+  color: #fffffe;
+  font-family: "Spline Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  border-radius: 50px;
+  background: #7f5af0;
+  border: 0 solid black;
+  width: 267px;
+  height: 64px;
+}
+
+.discover {
+  padding: 23px 7px 24px 31px;
+}
+
+.svg-panah {
+  padding: 0 32px 0 0;
+}
+
+/* bagian kiri home */
+header .container .col-two {
+  top: 10px;
+  width: 400px;
+  height: 685px;
+  position: relative;
+  top: 0;
+}
+
+header .container .col-two .line-1 {
+  border: 4px solid rgba(127, 90, 240, 0.85);
+  transform: translateX(-24px);
+}
+
+header .container .col-two .line-2 {
+  border: 4px solid rgba(186, 255, 41, 0.38);
+  transform: translateX(100px) translateY(71px);
+}
+
+header .container .col-two .line {
+  width: 403px;
+  height: 612px;
+  border-radius: 23px;
+  position: absolute;
+}
+
+.con-img {
+  background-color: red;
+  width: 449px;
+  height: 609px;
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 30px;
+  background: linear-gradient(
+      180deg,
+      rgba(186, 243, 62, 0.06) -20.2%,
+      rgba(130, 185, 11, 0.13) 108.46%
+    ),
+    url("../../image/image-10.png"), lightgray 50% / cover no-repeat;
+  border-radius: 23px;
+}
+
+.circle {
+  position: absolute;
+  z-index: 2;
+  width: 141px;
+  height: 141px;
+  border-radius: 100%;
+  background-color: #baff29;
+  bottom: 24px;
+  right: -58px;
+}
+
+.circle .btn-two {
+  position: relative;
+  bottom: -14px;
+  left: -12px;
+  width: 87px;
+  height: 87px;
+  margin: auto;
+}
+
+/* AKHIR HOME */
+
+/* AWAL NAVBAR */
+.pembungkus .back .navbar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0;
+}
+
+nav .container .collapse ul li a {
+  color: #e2f0e7;
+  font-family: "Spline Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120px;
+}
+nav .container .collapse ul {
+  gap: 60px;
+}
+/* AKHIR NAVBAR */
+
+/* AWAL SECTION 1 */
+
+.section-one .container-fluid {
+  background-color: #baf935;
+  padding: 108px 105px 108px 104px;
+}
+.section-one .container-fluid .container {
+  position: relative;
+}
+.section-one .container-fluid .container h1 {
+  color: var(--primary-ps-5, #16161a);
+  font-family: "Spline Sans", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  gap: 44px;
+  margin-bottom: 102px;
+}
+
+.section-one .container-fluid .container p {
+  color: var(--primary-ps-5, #16161a);
+  font-family: "Spline Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 66px;
+}
+
+.section-one .container-fluid .container button {
+  color: var(--secondary-ss-1, #e3e3e5);
+  font-family: "Spline Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  width: 396.5px;
+  padding: 29.767px 64.297px;
+  align-items: flex-start;
+  gap: 11.907px;
+  border-radius: 59.535px;
+  background: var(--primary-ps-5, #16161a);
+}
+
+.section-one .container-fluid .container .svg-panah-2 {
+  position: absolute;
+  top: -53px;
+  left: -59px;
+}
+.section-one .container-fluid .container .svg-kali-2 {
+  position: absolute;
+  bottom: -15px;
+  right: -35px;
+}
+/* AKHIR SECTION 1 */
+
+.kotak-lur {
+  height: 98px;
+  background-color: #16161a;
+}
