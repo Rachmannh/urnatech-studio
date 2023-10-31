@@ -340,7 +340,7 @@ nav .container .collapse ul {
 /* AWAL SECTION 1 */
 
 .section-one .container-fluid {
-  background-color: #baf935;
+  background-color: #7f886c;
   padding: 108px 105px 108px 104px;
 }
 .section-one .container-fluid .container {
@@ -392,3 +392,254 @@ nav .container .collapse ul {
   height: 98px;
   background-color: #16161a;
 }
+
+/*Servics Section*/
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #16161a;
+}
+
+.service-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.service-container h2 {
+  font-family: "Spline Sans", sans-serif;
+  font-size: 58px;
+  font-weight: 600;
+  margin: 40px;
+  color: #fff;
+  margin-left: 120px;
+}
+
+span {
+  color: #baf935;
+}
+
+.divider {
+  border-top: 7px solid #baf935;
+  width: 100%;
+  right: 0;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.image-container,
+.text-container {
+  flex: 1;
+}
+
+.image-container {
+  order: 1; 
+}
+
+.text-container {
+  order: 2; 
+}
+
+.content-container:nth-child(1) .image-container,
+.content-container:nth-child(3) .image-container {
+  order: 2; 
+}
+
+.content-container:nth-child(1) .text-container,
+.content-container:nth-child(3) .text-container {
+  order: 1; 
+}
+
+.text-container {
+  padding: 20px 80px;
+}
+
+.content-container .text-container button {
+  color: #fffffe;
+  font-family: "Spline Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 50px;
+  background: #7f5af0;
+  border: 0 solid black;
+  width: 430px;
+  height: 60px;
+  padding-right: 80px;
+  position: relative;
+}
+
+.svg-panah {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+
+.text-container span {
+  color: #fff;
+}
+
+.text-container p {
+  width: 430px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: justify;
+  font-family: 'Spline Sans', sans-serif;
+  padding: 30px 0px;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
+.image-container {
+  position: relative;
+}
+
+/*whyus*/
+
+.why-us-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.why-us-container h2 {
+  font-family: "Spline Sans", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 21px;
+  color: #fff;
+}
+
+.divider2 {
+  border-top: 7px solid #baf935;
+  width: 100%;
+  margin: 0 1rem;
+  left: 0;
+}
+
+.content-container-why {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.image-container-why {
+  width: 50%;
+  background-size: cover;
+}
+
+.image-container img {
+  width: 80%;
+  height: auto;
+  display: flex;
+  margin: 150px;
+  margin-top: 20px;
+}
+
+.text-container-why {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80px;
+  margin-left: 1rem;
+}
+
+.text-container-1,
+.text-container-2,
+.text-container-3 {
+  margin-bottom: 1rem;
+}
+
+.text-container .col-md-4 h1 {
+  font-size: 44px;
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Spline Sans';
+  margin-top: 10px;
+}
+
+.text-container p {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 300;
+  font-family: 'Spline Sans';
+  font-size: 15px;
+  text-align: justify;
+  line-height: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-4 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.Sdivider {
+  border-top: 1px solid #7f5af0;
+  width: 75%;
+}
+/*whyus ends*/
+
+/*project starts*/
+.row .col-md-6 h1 {
+  color: #fff;
+  margin-left: 80px;
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: 'Spline Sans';
+}
+
+.image-container-pro img {
+  width: 80%;
+  height: auto;
+  display: flex;
+  margin: 80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-transparent {
+  position: relative;
+  bottom: 0;
+  left: 27%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  border: 2px solid #7f5af0;
+  background-color: transparent;
+  color: #7f5af0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+  font-family: 'Spline Sans';
+}
+
+.btn-transparent:hover {
+  background-color: #7f5af0;
+  color: white;
+}
+
+
+
