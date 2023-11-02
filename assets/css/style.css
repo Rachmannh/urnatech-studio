@@ -128,15 +128,6 @@ table {
   border-spacing: 0;
 }
 
-body {
-  height: 3000px;
-}
-
-/* mulai Home bagian kanan*/
-/* .pembungkus {
-  height: 100vh;
-} */
-
 .pembungkus .back {
   background: linear-gradient(
     to top left,
@@ -244,15 +235,15 @@ header .container .col button {
   height: 64px;
 }
 
-.discover {
+header .container .col button .discover {
   padding: 23px 7px 24px 31px;
 }
 
-.svg-panah {
+header .container .col button .svg-banah {
   padding: 0 32px 0 0;
 }
 
-/* bagian kiri home */
+/* bagian kanan home */
 header .container .col-two {
   top: 10px;
   width: 400px;
@@ -279,7 +270,6 @@ header .container .col-two .line {
 }
 
 .con-img {
-  background-color: red;
   width: 449px;
   height: 609px;
   position: absolute;
@@ -335,24 +325,50 @@ nav .container .collapse ul li a {
 nav .container .collapse ul {
   gap: 60px;
 }
+/* humburger animasi */
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: #fff;
+  transform: rotate(43deg) translate(-3px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-53deg);
+  background-color: #fff;
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  scale: 0;
+}
 /* AKHIR NAVBAR */
 
 /* AWAL SECTION 1 */
 
 .section-one .container-fluid {
-  background-color: #7f886c;
+  background-color: #baf935;
   padding: 108px 105px 108px 104px;
 }
 .section-one .container-fluid .container {
   position: relative;
 }
-.section-one .container-fluid .container h1 {
-  color: var(--primary-ps-5, #16161a);
+section.section-one .container-fluid .container h1.d-flex {
   font-family: "Spline Sans", sans-serif;
-  font-size: 60px;
+  font-size: 4vw;
   font-weight: 700;
   gap: 44px;
   margin-bottom: 102px;
+}
+
+section.section-one .container-fluid .container h1.d-flex span {
+  color: #16161a;
 }
 
 .section-one .container-fluid .container p {
@@ -388,10 +404,14 @@ nav .container .collapse ul {
 }
 /* AKHIR SECTION 1 */
 
+/* merquee html (teks berjalan ) */
+
 .kotak-lur {
   height: 98px;
   background-color: #16161a;
 }
+
+/* end merquee html */
 
 /*Servics Section*/
 section {
@@ -439,21 +459,21 @@ span {
 }
 
 .image-container {
-  order: 1; 
+  order: 1;
 }
 
 .text-container {
-  order: 2; 
+  order: 2;
 }
 
 .content-container:nth-child(1) .image-container,
 .content-container:nth-child(3) .image-container {
-  order: 2; 
+  order: 2;
 }
 
 .content-container:nth-child(1) .text-container,
 .content-container:nth-child(3) .text-container {
-  order: 1; 
+  order: 1;
 }
 
 .text-container {
@@ -491,7 +511,7 @@ span {
   font-size: 20px;
   font-weight: 400;
   text-align: justify;
-  font-family: 'Spline Sans', sans-serif;
+  font-family: "Spline Sans", sans-serif;
   padding: 30px 0px;
   letter-spacing: 1px;
   line-height: 25px;
@@ -565,7 +585,7 @@ span {
   margin: 0;
   color: #fff;
   font-weight: 600;
-  font-family: 'Spline Sans';
+  font-family: "Spline Sans";
   margin-top: 10px;
 }
 
@@ -573,7 +593,7 @@ span {
   font-size: 1rem;
   margin: 0;
   font-weight: 300;
-  font-family: 'Spline Sans';
+  font-family: "Spline Sans";
   font-size: 15px;
   text-align: justify;
   line-height: 20px;
@@ -608,7 +628,7 @@ span {
   font-weight: 300;
   font-size: 18px;
   line-height: 28px;
-  font-family: 'Spline Sans';
+  font-family: "Spline Sans";
 }
 
 .image-container-pro img {
@@ -633,7 +653,7 @@ span {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 50px;
-  font-family: 'Spline Sans';
+  font-family: "Spline Sans";
 }
 
 .btn-transparent:hover {
@@ -641,5 +661,589 @@ span {
   color: white;
 }
 
+/* Start Footer */
+footer .container-fluid {
+  padding-top: 69px;
+  padding-bottom: 34px;
+  background-color: #16161a;
+}
 
+footer .container .row {
+  margin-bottom: 94px;
+  gap: 142px;
+}
+footer .container .row div.find-us {
+  justify-content: space-around;
+}
+footer .container .row .col {
+  gap: 13px;
+}
+footer .container .row .col h3 {
+  color: #fcfcfc;
+  font-family: "Spline Sans";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+  letter-spacing: -0.34px;
+}
+footer .container .row .col div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
 
+footer .container .row .col div span.svg {
+  width: 40px;
+  height: 40px;
+  background-color: #535357;
+  text-align: center;
+  border-radius: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .container .row .col p,
+footer .container .row .col div span {
+  color: #fcfcfc;
+  font-family: "Spline Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+  letter-spacing: -0.198px;
+}
+
+footer .container p.tm {
+  color: #fff;
+  font-family: "Spline Sans";
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+/* End Footer */
+
+/* RESPONSIVE */
+@media (max-width: 1300px) {
+  /* header Start */
+  header .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  header .container .col-two .line-1 {
+    transform: translateX(-50px);
+  }
+
+  header .container .col-two .line-2 {
+    transform: translateX(65px) translateY(71px);
+  }
+  .con-img {
+    left: 0;
+  }
+  .circle {
+    right: -43px;
+  }
+  .svg-kali {
+    top: 28px;
+    left: -46px;
+  }
+  /* header end */
+
+  /* Start Get in Touch */
+
+  /* End Get in Touch */
+}
+
+@media (max-width: 1200px) {
+  /* Start Header */
+  header .container {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  header .container .col-two {
+    width: 300px;
+  }
+
+  header .container .col h1 {
+    font-size: 8vmin;
+    line-height: 81px;
+  }
+
+  header .container .col .kotak {
+    max-width: 482px;
+    margin-bottom: 10px;
+  }
+
+  .ins-div {
+    width: 241px;
+    height: 98px;
+    left: -18px;
+    top: -30px;
+  }
+
+  .svg-kali {
+    top: 28px;
+    left: -29px;
+  }
+
+  /* bagian kanan home */
+  header .container .col-two .line-1 {
+    border: 4px solid rgba(127, 90, 240, 0.85);
+    transform: translateX(-71px);
+  }
+
+  header .container .col-two .line-2 {
+    border: 4px solid rgba(186, 255, 41, 0.38);
+    transform: translateX(-13px) translateY(71px);
+  }
+
+  .con-img {
+    width: 400px;
+    left: -34px;
+  }
+
+  .circle {
+    right: -33px;
+  }
+  /* End Header */
+
+  /* Start Section paling bawah */
+
+  section.section-one .container-fluid .container h1.d-flex {
+    font-size: calc(3vmax + 5px);
+    gap: 22px;
+    margin-bottom: 51px;
+  }
+
+  .section-one .container-fluid .container p {
+    font-size: calc(2vmax + 4px);
+    margin-bottom: 44px;
+  }
+  /* End Section paling bawah */
+
+  /* Start Footer */
+  footer .container .row {
+    gap: 84px;
+  }
+  /* End Footer */
+}
+
+@media (max-width: 991px) {
+  .pembungkus .back {
+    height: 1350px;
+  }
+
+  header .container .col .kotak {
+    margin-bottom: 41px;
+    width: 100%;
+  }
+
+  header .container .col h1 {
+    line-height: 97px;
+    font-size: 72px;
+  }
+
+  header .container {
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  header .container .col-7 {
+    width: 82%;
+  }
+
+  .ins-div {
+    width: 300px;
+    height: 129px;
+    left: -32px;
+    top: -36px;
+  }
+
+  .svg-kali {
+    position: absolute;
+    top: 27px;
+    left: -54px;
+  }
+
+  /* bagian kanan home */
+  header .container div.col-two {
+    width: 400px;
+    height: 685px;
+  }
+
+  .con-img {
+    width: 449px;
+    height: 609px;
+  }
+  .circle {
+    right: -60px;
+  }
+  header .container .col-two .line-1 {
+    transform: translateX(-87px);
+  }
+
+  header .container .col-two .line-2 {
+    transform: translateX(45px) translateY(71px);
+  }
+  /* End Header */
+
+  /* Start Nav */
+
+  nav.navbar {
+    position: relative;
+  }
+
+  nav.bar-bar {
+    background: linear-gradient(
+      to top left,
+      rgba(186, 165, 212, 3.7),
+      rgba(186, 165, 212, 3.7) 48%
+    );
+  }
+
+  nav .container div.collapse ul {
+    position: absolute;
+    z-index: 999;
+    gap: 10px;
+    left: 0px;
+    right: 0px;
+    top: 90px;
+    display: none;
+    transform: translateY(-100%);
+    background: linear-gradient(
+      to top left,
+      rgba(186, 255, 41, 1.7) 30%,
+      rgba(186, 165, 212, 3.7) 48%
+    );
+    transition: all 0.6s;
+  }
+
+  nav .container div.collapse ul li {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  nav .container div.collapse ul li a {
+    color: #16161a;
+  }
+
+  .menu-toggle {
+    display: block;
+    height: 30px;
+    position: absolute;
+    top: 32px;
+    right: calc(10vw + 20px);
+  }
+
+  .menu-toggle input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 999;
+    width: 33px;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    transition: all 0.5s;
+    margin-bottom: 7px;
+  }
+
+  nav.navbar .container div.collapse ul.slide {
+    transform: translateY(0);
+    opacity: 1;
+    display: block;
+  }
+
+  /* End Nav */
+
+  /* Start Section paling bawah */
+
+  section.section-one .container-fluid .container h1.d-flex {
+    font-size: calc(3vmax + 2px);
+  }
+  .section-one .container-fluid .container p {
+    font-size: calc(2vmax + 2px);
+  }
+
+  .section-one .container-fluid .container button {
+    width: 267px;
+    height: 64px;
+    padding: 24px 48px;
+    border-radius: 50px;
+    align-items: center;
+    margin: auto;
+    display: flex;
+  }
+  /* End Section paling bawah */
+}
+
+@media (max-width: 768px) {
+  /* Start Header */
+  header .container {
+    margin: auto;
+  }
+
+  header .container .col-7 {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header .container .col .kotak {
+    margin-bottom: 40px;
+    width: 582px;
+  }
+
+  header .container .col h1 {
+    font-size: 60px;
+    width: 482px;
+  }
+
+  .ins-div {
+    width: 257px;
+    height: 114px;
+    left: -32px;
+    top: -29px;
+  }
+
+  .svg-kali {
+    top: 44px;
+    left: -15px;
+  }
+  /* End Header */
+  /* Start Section paling bawah */
+  section.section-one .container-fluid {
+    padding: 108px 0px;
+  }
+
+  section.section-one .container-fluid .container h1.d-flex {
+    font-size: calc(5vw - 8px);
+  }
+
+  .section-one .container-fluid .container .svg-panah-2 {
+    top: -60px;
+    left: -47px;
+  }
+  .section-one .container-fluid .container .svg-kali-2 {
+    bottom: -30px;
+    right: -15px;
+  }
+  /* End Section paling bawah */
+}
+
+@media (max-width: 580px) {
+  /* Start Header */
+  header .container {
+    margin: auto;
+  }
+
+  header .container .col-7 {
+    gap: 22px;
+  }
+
+  header .container .col .kotak {
+    margin-bottom: 35px;
+    width: 100%;
+    height: 120px;
+  }
+
+  header .container .col h1 {
+    font-size: 10vw;
+    width: 100%;
+    line-height: 70px;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  header .container .col .slogan {
+    gap: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  header .container .col .slogan p {
+    font-size: calc(2vw + 6px);
+    margin-left: 10px;
+  }
+
+  .ins-div {
+    width: 201px;
+    height: 84px;
+    left: 8px;
+    top: -14px;
+  }
+
+  .svg-kali {
+    top: 44px;
+    left: 2px;
+  }
+
+  /* bagian kanan home */
+
+  .circle {
+    right: -25px;
+  }
+  header .container .col-two .line-1 {
+    transform: translateX(-68px);
+  }
+
+  header .container .col-two .line-2 {
+    transform: translateX(22px) translateY(71px);
+  }
+  /* End Header */
+
+  /* Start Section paling bawah */
+  section.section-one .container-fluid {
+    padding: 108px 0px;
+  }
+
+  section.section-one .container-fluid .container h1.d-flex {
+    font-size: calc(5vw - 2px);
+  }
+
+  .section-one .container-fluid .container p {
+    font-size: calc(4vw - 5px);
+  }
+
+  .section-one .container-fluid .container .svg-panah-2 {
+    position: absolute;
+    top: -94px;
+    left: -19px;
+  }
+  .section-one .container-fluid .container .svg-kali-2 {
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+  }
+  /* End Section paling bawah */
+}
+
+@media (max-width: 428px) {
+  /* Start Header */
+
+  header .container .col-7 {
+    gap: 5px;
+  }
+
+  header .container .col h1 {
+    line-height: 60px;
+  }
+
+  header .container .col .slogan {
+    margin-top: -20px;
+  }
+  header .container .col .slogan p {
+    font-size: calc(2vw + 4px);
+  }
+
+  .ins-div {
+    width: 160px;
+    height: 70px;
+    left: 8px;
+    top: -8px;
+  }
+
+  .svg-kali {
+    top: -47px;
+    left: 4px;
+  }
+
+  /* bagian home kanan nya */
+
+  .con-img {
+    width: 320px;
+    left: 33px;
+  }
+
+  header .container .col-two .line {
+    width: 320px;
+  }
+  .circle {
+    right: 0px;
+    bottom: -30px;
+  }
+  header .container .col-two .line-1 {
+    transform: translateX(-21px);
+  }
+  header .container .col-two .line-2 {
+    transform: translateX(18px) translateY(71px);
+  }
+
+  /* End Header */
+
+  /* Start Section paling bawah */
+  section.section-one .container-fluid {
+    padding: 108px 0px;
+  }
+
+  section.section-one .container-fluid .container h1.d-flex {
+    /* font-size: calc(7vw - 7px); */
+    font-size: calc(8vw - 9px);
+  }
+
+  .section-one .container-fluid .container p {
+    font-size: calc(6vw - 10px);
+  }
+
+  .section-one .container-fluid .container .svg-kali-2 {
+    right: 0px;
+    bottom: -79px;
+  }
+
+  .section-one .container-fluid .container button {
+    font-size: 23px;
+    width: 220px;
+    padding: 15px 40px;
+  }
+  /* End Section paling bawah */
+}
+
+@media (max-width: 360px) {
+  .con-img {
+    width: 320px;
+    left: 9px;
+  }
+
+  header .container .col-two .line {
+    width: 320px;
+  }
+  .circle {
+    right: 0px;
+    bottom: -30px;
+  }
+  header .container .col-two .line-1 {
+    transform: translateX(-21px);
+  }
+  header .container .col-two .line-2 {
+    transform: translateX(0px) translateY(71px);
+  }
+
+  /* Start Section paling bawah */
+
+  .section-one .container-fluid .container p {
+    font-size: calc(7vw - 12px);
+  }
+
+  .section-one .container-fluid .container button {
+    font-size: 23px;
+    width: 200px;
+    height: 40px;
+    padding: 15px 28px;
+  }
+  /* End Section paling bawah */
+}
