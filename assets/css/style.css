@@ -127,14 +127,20 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* batas */
+
+body {
+  background-image: url(../../image/bg-body.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body .pembungkus {
+  background-image: none !important;
+  background-color: none !important;
+}
 
 .pembungkus .back {
-  background: linear-gradient(
-    to top left,
-    rgba(186, 255, 41, 0.2) 30%,
-    rgba(186, 165, 212, 0.2) 60%
-  );
-  /* height: 100vh; */
   position: relative;
   padding-bottom: 76px;
 }
@@ -178,16 +184,43 @@ header .container .col h1 {
   left: -54px;
 }
 
+@keyframes variant2 {
+  0% {
+    background-position: left;
+    animation-timing-function: linear;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: right;
+  }
+}
 header .container .col h1 .inspire {
-  background: var(
-    --Linear-1,
-    linear-gradient(94deg, #40c9ff 0%, #e81cff 38.28%)
+  animation-name: variant2;
+  background: linear-gradient(
+    94deg,
+    #40c9ff 0%,
+    #e81cff 38.28%,
+
+    #bf0fff 0%,
+    #cbff49 100%,
+    #7f5af0 0%,
+    #baf935 50.52%,
+    #6290c3 100%
   );
+  animation-delay: 1ms;
+  background-size: 400%;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-duration: 5s;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
+
+/* End Animasi inspire */
 
 .ins-div {
   width: 300px;
@@ -233,6 +266,12 @@ header .container .col button {
   border: 0 solid black;
   width: 267px;
   height: 64px;
+  position: relative;
+}
+header .container .col button span {
+  color: #fffffe;
+  position: relative;
+  z-index: 2;
 }
 
 header .container .col button .discover {
@@ -242,6 +281,40 @@ header .container .col button .discover {
 header .container .col button .svg-banah {
   padding: 0 32px 0 0;
 }
+
+/* Start button animasi */
+
+header .container .col button.btn-hiro::after {
+  content: "";
+  border-radius: 50px;
+  position: absolute;
+  background-color: #331493;
+  z-index: 1;
+  top: 29px;
+  bottom: 0px;
+  left: 31px;
+  right: 32px;
+  transition: all 150ms ease-in;
+  opacity: 0;
+}
+
+header .container .col button.btn-hiro:hover::after {
+  top: 10px;
+  bottom: 0px;
+  left: 15px;
+  right: 12px;
+  opacity: 1;
+}
+
+header .container .col button.btn-hiro:hover:hover::after {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  opacity: 1;
+}
+
+/* End button animasi */
 
 /* bagian kanan home */
 header .container .col-two {
@@ -320,11 +393,38 @@ nav .container .collapse ul li a {
   font-family: "Spline Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 120px;
+  /* line-height: 120px; */
+  position: relative;
+  /* background-color: #baff29; */
 }
 nav .container .collapse ul {
   gap: 60px;
 }
+
+/* Start Teks saat di hover */
+nav .container .collapse ul li a::after {
+  transition: all 300ms ease-in;
+  content: "";
+  background-color: #baff29;
+  position: absolute;
+  left: 7px;
+  right: 6px;
+  height: 1px;
+  bottom: 7px;
+  display: none;
+}
+nav .container .collapse ul li a:hover {
+  text-shadow: 1px -1px 20px rgba(186, 255, 41, 0.83);
+  color: #baff29;
+}
+
+nav .container .collapse ul li a:hover::after {
+  /* opacity: 1; */
+  display: block;
+  box-shadow: 1px -1px 20px 0px rgba(186, 255, 41, 0.83);
+}
+/* End Teks saat di hover */
+
 /* humburger animasi */
 
 .menu-toggle span:nth-child(2) {
@@ -347,6 +447,10 @@ nav .container .collapse ul {
 
 .menu-toggle input:checked ~ span:nth-child(3) {
   scale: 0;
+}
+
+nav .container .menu-toggle input {
+  display: none;
 }
 /* AKHIR NAVBAR */
 
@@ -374,7 +478,7 @@ section.section-one .container-fluid .container h1.d-flex span {
 .section-one .container-fluid .container p {
   color: var(--primary-ps-5, #16161a);
   font-family: "Spline Sans", sans-serif;
-  font-size: 30px;
+  font-size: calc(2em - 0.3em);
   font-weight: 400;
   margin-bottom: 66px;
 }
@@ -409,8 +513,29 @@ section.section-one .container-fluid .container h1.d-flex span {
 .kotak-lur {
   height: 98px;
   background-color: #16161a;
+  align-items: center;
 }
 
+.kotak-lur marquee ul {
+  gap: 21.72px;
+}
+.kotak-lur marquee ul li {
+  color: #ccbdf9;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 24.498px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 21.72px;
+}
+
+.kotak-lur marquee ul li span {
+  width: 11px;
+  height: 11px;
+  transform: rotate(-45deg);
+  background-color: #7f5af0;
+  display: inline-block;
+}
 /* end merquee html */
 
 /*Servics Section*/
@@ -418,7 +543,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #16161a;
+  /* background-color: #16161a; */
 }
 
 .service-container {
@@ -767,7 +892,7 @@ footer .container p.tm {
   }
 
   header .container .col h1 {
-    font-size: 8vmin;
+    font-size: calc(8vmin + 0.8em);
     line-height: 81px;
   }
 
@@ -791,7 +916,7 @@ footer .container p.tm {
   /* bagian kanan home */
   header .container .col-two .line-1 {
     border: 4px solid rgba(127, 90, 240, 0.85);
-    transform: translateX(-71px);
+    transform: translateX(-60px);
   }
 
   header .container .col-two .line-2 {
@@ -801,7 +926,7 @@ footer .container p.tm {
 
   .con-img {
     width: 400px;
-    left: -34px;
+    left: -25px;
   }
 
   .circle {
@@ -917,7 +1042,7 @@ footer .container p.tm {
       rgba(186, 255, 41, 1.7) 30%,
       rgba(186, 165, 212, 3.7) 48%
     );
-    transition: all 0.6s;
+    transition: all 1s;
   }
 
   nav .container div.collapse ul li {
@@ -939,16 +1064,17 @@ footer .container p.tm {
     right: calc(10vw + 20px);
   }
 
-  .menu-toggle input {
+  nav .container .menu-toggle input {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0px;
+    left: 0px;
+    right: 0px;
     height: 100%;
     opacity: 0;
     cursor: pointer;
     z-index: 999;
     width: 33px;
+    display: block;
   }
 
   .menu-toggle span {
@@ -962,8 +1088,7 @@ footer .container p.tm {
   }
 
   nav.navbar .container div.collapse ul.slide {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(0%);
     display: block;
   }
 
@@ -1094,16 +1219,24 @@ footer .container p.tm {
   }
 
   /* bagian kanan home */
-
+  .con-img {
+    width: 320px;
+    left: 33px;
+    height: 500px;
+  }
   .circle {
     right: -25px;
   }
+  header .container .col-two .line {
+    width: 320px;
+    height: 500px;
+  }
   header .container .col-two .line-1 {
-    transform: translateX(-68px);
+    transform: translateX(-7px);
   }
 
   header .container .col-two .line-2 {
-    transform: translateX(22px) translateY(71px);
+    transform: translateX(46px) translateY(71px);
   }
   /* End Header */
 
@@ -1167,7 +1300,7 @@ footer .container p.tm {
 
   .con-img {
     width: 320px;
-    left: 33px;
+    left: 28px;
   }
 
   header .container .col-two .line {
