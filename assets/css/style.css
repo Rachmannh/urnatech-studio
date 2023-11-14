@@ -127,18 +127,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* batas */
-
-body {
-  background-image: url(../../image/bg-body.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-body .pembungkus {
-  background-image: none !important;
-  background-color: none !important;
-}
 
 .pembungkus .back {
   position: relative;
@@ -282,40 +270,6 @@ header .container .col button .svg-banah {
   padding: 0 32px 0 0;
 }
 
-/* Start button animasi */
-
-header .container .col button.btn-hiro::after {
-  content: "";
-  border-radius: 50px;
-  position: absolute;
-  background-color: #331493;
-  z-index: 1;
-  top: 29px;
-  bottom: 0px;
-  left: 31px;
-  right: 32px;
-  transition: all 150ms ease-in;
-  opacity: 0;
-}
-
-header .container .col button.btn-hiro:hover::after {
-  top: 10px;
-  bottom: 0px;
-  left: 15px;
-  right: 12px;
-  opacity: 1;
-}
-
-header .container .col button.btn-hiro:hover:hover::after {
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  opacity: 1;
-}
-
-/* End button animasi */
-
 /* bagian kanan home */
 header .container .col-two {
   top: 10px;
@@ -400,31 +354,6 @@ nav .container .collapse ul li a {
 nav .container .collapse ul {
   gap: 60px;
 }
-
-/* Start Teks saat di hover */
-nav .container .collapse ul li a::after {
-  transition: all 300ms ease-in;
-  content: "";
-  background-color: #baff29;
-  position: absolute;
-  left: 7px;
-  right: 6px;
-  height: 1px;
-  bottom: 7px;
-  display: none;
-}
-nav .container .collapse ul li a:hover {
-  text-shadow: 1px -1px 20px rgba(186, 255, 41, 0.83);
-  color: #baff29;
-}
-
-nav .container .collapse ul li a:hover::after {
-  /* opacity: 1; */
-  display: block;
-  box-shadow: 1px -1px 20px 0px rgba(186, 255, 41, 0.83);
-}
-/* End Teks saat di hover */
-
 /* humburger animasi */
 
 .menu-toggle span:nth-child(2) {
@@ -447,10 +376,6 @@ nav .container .collapse ul li a:hover::after {
 
 .menu-toggle input:checked ~ span:nth-child(3) {
   scale: 0;
-}
-
-nav .container .menu-toggle input {
-  display: none;
 }
 /* AKHIR NAVBAR */
 
@@ -513,29 +438,8 @@ section.section-one .container-fluid .container h1.d-flex span {
 .kotak-lur {
   height: 98px;
   background-color: #16161a;
-  align-items: center;
 }
 
-.kotak-lur marquee ul {
-  gap: 21.72px;
-}
-.kotak-lur marquee ul li {
-  color: #ccbdf9;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 24.498px;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  gap: 21.72px;
-}
-
-.kotak-lur marquee ul li span {
-  width: 11px;
-  height: 11px;
-  transform: rotate(-45deg);
-  background-color: #7f5af0;
-  display: inline-block;
-}
 /* end merquee html */
 
 /*Servics Section*/
